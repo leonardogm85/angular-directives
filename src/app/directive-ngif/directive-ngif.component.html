@@ -1,0 +1,46 @@
+<h3>*ngIf with Array.Length</h3>
+
+<div *ngIf="courses.length > 0">
+  Course list here.
+</div>
+<div *ngIf="courses.length === 0">
+  No course list here.
+</div>
+
+<br>
+
+<h3>*ngIf with (click)</h3>
+
+<div *ngIf="showCourses">
+  Course list here.
+</div>
+<div *ngIf="!showCourses">
+  No course list here.
+</div>
+
+<button type="button" (click)="onShowCourses()">Show or hide courses</button>
+
+<br>
+<br>
+
+<h3>[hidden] with (click)</h3>
+
+<div [hidden]="!showCourses">
+  Course list here.
+</div>
+<div [hidden]="showCourses">
+  No course list here.
+</div>
+
+<button type="button" (click)="onShowCourses()">Show or hide courses</button>
+
+<br>
+<br>
+
+<h3>Template</h3>
+
+<ng-template [ngIf]="showCourses">
+  <div>Course list here</div>
+</ng-template>
+
+<button type="button" (click)="onShowCourses()">Show or hide courses</button>

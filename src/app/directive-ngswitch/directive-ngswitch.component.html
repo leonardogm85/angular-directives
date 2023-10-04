@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg bg-primary fg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">Angular</a>
+    <div class="navbar-nav me-auto">
+      <a class="nav-link" [class.active]="tab === 'Home'" (click)="tab = 'Home'">Home</a>
+      <a class="nav-link" [class.active]="tab === 'Map'" (click)="tab = 'Map'">Map</a>
+      <a class="nav-link" [class.active]="tab === 'List'" (click)="tab = 'List'">List</a>
+    </div>
+  </div>
+</nav>
+
+<br>
+
+<h3>*ngSwitch</h3>
+
+<div class="container" [ngSwitch]="tab">
+  <p *ngSwitchCase="'Map'">Map mode activated</p>
+  <p *ngSwitchCase="'List'">List mode activated</p>
+  <p *ngSwitchDefault>Home</p>
+</div>
+
+<br>
+
+<h3>Template</h3>
+
+<div class="container" [ngSwitch]="tab">
+
+  <ng-template [ngSwitchCase]="'Map'">
+    <p>Map mode activated</p>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="'List'">
+    <p>List mode activated</p>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="'Home'">
+    <p>Home</p>
+  </ng-template>
+
+</div>

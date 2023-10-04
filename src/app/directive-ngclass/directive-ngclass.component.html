@@ -1,0 +1,21 @@
+<h1>
+  Property Binding [class]:
+  <i
+      class="bi bi-star"
+      [class.bi-star]="!myFavorite"
+      [class.bi-star-fill]="myFavorite"
+      (click)="onClick()"></i>
+</h1>
+
+<br>
+
+<h1>
+  Diretive [ngClass]:
+  <i
+      class="bi bi-star"
+      [ngClass]="{
+        'bi-star': !myFavorite,
+        'bi-star-fill': myFavorite
+      }"
+      (click)="onClick()"></i>
+</h1>

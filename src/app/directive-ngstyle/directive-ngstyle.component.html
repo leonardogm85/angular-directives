@@ -1,0 +1,40 @@
+<h3>
+  Style with property binding [style]
+</h3>
+
+<button
+    type="button"
+    [style.backgroundColor]="active ? 'blue' : 'gray'"
+    [style.color]="active ? 'white' : 'black'"
+    [style.fontWeight]="active ? 'bold' : 'normal'"
+    [style.fontSize]="fontSize + 'px'"
+    (click)="onClick()">
+  Change active attribute
+</button>
+
+<br>
+
+<input type="number" [(ngModel)]="fontSize">
+
+<br>
+<br>
+
+<h3>
+  Style with directive [ngStyle]
+</h3>
+
+<button
+    type="button"
+    [ngStyle]="{
+      'backgroundColor': (active ? 'blue' : 'gray'),
+      'color': (active ? 'white' : 'black'),
+      'fontWeight': (active ? 'bold' : 'normal'),
+      'fontSize': (fontSize + 'px')
+    }"
+    (click)="onClick()">
+  Change active attribute
+</button>
+
+<br>
+
+<input type="number" [(ngModel)]="fontSize">

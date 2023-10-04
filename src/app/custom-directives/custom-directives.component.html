@@ -1,0 +1,32 @@
+<p appHighlight class="mb-5">
+  Text with highlight
+</p>
+
+<button appHighlight class="mb-5">
+  Button with highlight
+</button>
+
+<p appHighlightOnHover class="mb-5">
+  Text with highlight on hover
+</p>
+
+<p appFullHighlight [defaultColor]="'gray'" [highlightColor]="'red'" class="mb-5">
+  Text with custom highlight
+</p>
+
+<div class="mb-5">
+  <div *ngIf="showCourses">
+    Course list here.
+  </div>
+  <div *ngElse="showCourses">
+    No course list here.
+  </div>
+
+  <ng-template [ngElse]="showCourses">
+    <div>
+      No course list here. (With ngTemplate)
+    </div>
+  </ng-template>
+
+  <button type="button" (click)="onShowCourses()">Show or hide courses</button>
+</div>

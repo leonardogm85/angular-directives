@@ -1,0 +1,7 @@
+<p>Task description: {{ task.description }}</p>
+
+<h3>Conditional Operator (?:) (Ternary) (Elvis)</h3>
+<p>Task responsible: {{ task.responsible ? task.responsible.name : '-' }}</p>
+
+<h3>Optional Chaining Operator (?.) and Nullish Coalescing operator (??)</h3>
+<p>Task responsible: {{ task.responsible?.name ?? '-' }}</p>

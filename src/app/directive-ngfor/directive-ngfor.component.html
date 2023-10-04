@@ -1,0 +1,19 @@
+<h3>*ngFor</h3>
+
+<ul>
+  <li *ngFor="let course of courses; index as i">
+    {{ i + 1 }}. {{ course }}
+  </li>
+</ul>
+
+<br>
+
+<h3>Template</h3>
+
+<ul>
+  <ng-template ngFor let-course [ngForOf]="courses" let-i="index">
+    <li>
+      {{ i + 1 }}. {{ course }}
+    </li>
+  </ng-template>
+</ul>
